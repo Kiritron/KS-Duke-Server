@@ -1,7 +1,6 @@
 package space.kiritron.duke_srv.ks_libs.pixel;
 
 import space.kiritron.duke_srv.ks_libs.pixel.filefunc.GetPathOfAPP;
-
 import static space.kiritron.duke_srv.ks_libs.pixel.filefunc.DirControls.CreateDir;
 import static space.kiritron.duke_srv.ks_libs.pixel.filefunc.DirControls.SearchDir;
 

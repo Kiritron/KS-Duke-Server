@@ -1,5 +1,6 @@
 package space.kiritron.duke_srv.core;
 
+import space.kiritron.duke_srv.ks_libs.pixel.filefunc.FileControls;
 import space.kiritron.duke_srv.ks_libs.pixel.filefunc.GetPathOfAPP;
 import space.kiritron.duke_srv.ks_libs.pixel.logger.genLogMessage;
 import space.kiritron.duke_srv.ks_libs.pixel.logger.toConsole;
@@ -8,16 +9,17 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import static space.kiritron.duke_srv.ks_libs.pixel.tolchok.core.ReadCFG;
+import static space.kiritron.duke_srv.ks_libs.tolchok.TOLF_Handler.ReadParamFromData;
 
 public class Server extends Thread {
     protected static int port;
 
     static {
         try {
-            port = Integer.parseInt(ReadCFG(GetPathOfAPP.GetPathWithSep() + "cfg" + GetPathOfAPP.GetSep() + "server.tolf", "SERVER-OPTIONS", "PORT"));
+            port = Integer.parseInt(ReadParamFromData(FileControls.ReadFile(GetPathOfAPP.GetPathWithSep() + "cfg" + GetPathOfAPP.GetSep() + "server.tolf"), "SERVER-OPTIONS", "PORT"));
         } catch (IOException e) {
-            e.printStackTrace();
+            toConsole.print(genLogMessage.gen((byte) 3, true,"Не удалось установить порт из конфигурации."));
+            port = 13585;
         }
     }
 

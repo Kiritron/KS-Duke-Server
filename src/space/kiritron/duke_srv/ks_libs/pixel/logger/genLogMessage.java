@@ -1,6 +1,12 @@
 package space.kiritron.duke_srv.ks_libs.pixel.logger;
 
 import space.kiritron.duke_srv.ks_libs.pixel.GDate;
+import space.kiritron.duke_srv.ks_libs.pixel.filefunc.GetPathOfAPP;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  * Класс с методами для генерации вывода в консоль.
@@ -16,7 +22,7 @@ public class genLogMessage {
     private final static String ERROR = consoleColors.RED + "ОШИБКА" + consoleColors.RESET;
 
     /**
-     * Вывод сообщения в консоль.
+     * Генерация вывода сообщения в консоль.
      * @param type Тип сообщения. 0 - без типа, 1 - Информация, 2 - Предупреждение, 3 - Ошибка.
      * @param timeWithDate true - если нужно сгенерировать сообщение не только, со временем, но и с датой. false - если нужно только время.
      * @param message Сообщение, которое нужно вывести в консоль.

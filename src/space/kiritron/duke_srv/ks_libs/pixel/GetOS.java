@@ -10,11 +10,11 @@ package space.kiritron.duke_srv.ks_libs.pixel;
 //новую версию данного класса.
 public class GetOS {
     public static String Name = "os.name",
-            Arch = "os.arch",
-            Version = "os.version",
-            User = "user.name",
-            UserDir = "user.dir",
-            UserHome = "user.home";
+                         Arch = "os.arch",
+                         Version = "os.version",
+                         User = "user.name",
+                         UserDir = "user.dir",
+                         UserHome = "user.home";
 
     /**
      * Узнать имя ОС, на которой запущено данное ПО.
@@ -27,10 +27,10 @@ public class GetOS {
 
     /**
      * Позволяет получить данные об ОС, на которой запущено данное ПО.
-     * @param Data Какую информацию необходимо получить об ОС. Доступны Name, Arch, Version, User, UserDir, UserHome.
+     * @param Type Какую информацию необходимо получить об ОС. Доступны Name, Arch, Version, User, UserDir, UserHome.
      * @return возвращает ту информацию об ОС, которую вы запросили.
      */
-    public static String GetOther(String Data) {
-        return System.getProperty(Data);
+    public static String GetOther(String Type) {
+        return System.getProperty(Type);
     }
 }

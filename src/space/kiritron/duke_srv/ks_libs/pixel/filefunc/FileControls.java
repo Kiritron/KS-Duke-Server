@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * Класс с методами для управления файлами.
  * @author Киритрон Стэйблкор
- * @version 1.0
+ * @version 1.1
  */
 
 public class FileControls {
@@ -57,7 +57,11 @@ public class FileControls {
             stringBuilder.append( line );
             stringBuilder.append( ls );
         }
-        stringBuilder.deleteCharAt(stringBuilder.length()-1);
+
+        if (stringBuilder.length() != 0) {
+            stringBuilder.deleteCharAt(stringBuilder.length()-1);
+        }
+
         return stringBuilder.toString();
     }
 
