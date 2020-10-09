@@ -24,6 +24,10 @@ import java.io.InputStreamReader;
 import static space.kiritron.duke_srv.core.consoleCommands.*;
 import static space.kiritron.duke_srv.init.NAME_APP;
 
+/**
+ * @author Киритрон Стэйблкор
+ */
+
 public class console {
     static BufferedReader br = null;
 

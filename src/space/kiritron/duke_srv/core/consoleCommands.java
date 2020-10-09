@@ -26,6 +26,10 @@ import java.io.InputStreamReader;
 import static space.kiritron.duke_srv.init.NAME_APP;
 import static space.kiritron.pixel.filefunc.FileControls.*;
 
+/**
+ * @author Киритрон Стэйблкор
+ */
+
 public class consoleCommands {
     public static void exit_from_programm() {
         toConsole.print(genLogMessage.gen((byte) 1, false, NAME_APP + " - " + "Вы собираетесь завершить работу КС Дьюк Сервер. Вы уверены?"));

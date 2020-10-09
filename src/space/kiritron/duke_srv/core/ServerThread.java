@@ -27,6 +27,10 @@ import static space.kiritron.duke_srv.init.NAME_APP;
 import static space.kiritron.pixel.filefunc.FileControls.ReadFile;
 import static space.kiritron.pixel.filefunc.FileControls.SearchFile;
 
+/**
+ * @author Киритрон Стэйблкор
+ */
+
 public class ServerThread extends Thread {
     private Socket socket;
 

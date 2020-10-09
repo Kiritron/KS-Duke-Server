@@ -27,6 +27,10 @@ import java.net.Socket;
 
 import static space.kiritron.tolchok.TOLF_Handler.ReadParamFromData;
 
+/**
+ * @author Киритрон Стэйблкор
+ */
+
 public class Server extends Thread {
     protected static int port;
 

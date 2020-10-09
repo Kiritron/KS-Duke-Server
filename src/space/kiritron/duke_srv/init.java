@@ -25,6 +25,10 @@ import java.io.IOException;
 import static space.kiritron.duke_srv.core.console.ConsoleThread;
 import static space.kiritron.pixel.filefunc.FileControls.*;
 
+/**
+ * @author Киритрон Стэйблкор
+ */
+
 public class init {
     public static String NAME_APP = "КС Дьюк Сервер";
     public static String VER_APP = "Вер.: 1.2-КСДС";
